@@ -19,6 +19,9 @@ public class Account implements Serializable {
         this.accountNumber = accountNumber;
         this.customerID = customerID;
         this.accountType = accountType;
+        if (initialBalance != null && initialBalance.compareTo(BigDecimal.ZERO) < 0) {
+            throw new IllegalArgumentException("Initial balance cannot be negative");
+        }
         this.balance = initialBalance != null ? initialBalance : BigDecimal.ZERO;
         if (this.balance.compareTo(BigDecimal.ZERO) > 0) {
             transactions.add(new Transaction("INITIAL_DEPOSIT", this.balance, this.balance));

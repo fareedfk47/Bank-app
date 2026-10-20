@@ -58,6 +58,11 @@ src/
    java -cp out banking.Main
    ```
 
+4. **Run automated integrity tests (checks balances & persistence before shipping):**
+   ```bash
+   java -cp out banking.BankingTest
+   ```
+
 ---
 
 ## Menu Preview

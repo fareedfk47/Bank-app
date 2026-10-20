@@ -60,8 +60,11 @@ public class BankingMenu {
                     searchAccount();
                     break;
                 case "0":
-                    service.saveAccounts();
-                    System.out.println("\n[✓] Data saved successfully. Goodbye!");
+                    if (service.saveAccounts()) {
+                        System.out.println("\n[✓] Data saved successfully. Goodbye!");
+                    } else {
+                        System.out.println("\n[!] WARNING: Changes could not be saved to disk!");
+                    }
                     running = false;
                     break;
                 default:
