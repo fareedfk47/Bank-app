@@ -44,8 +44,8 @@ src/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+   git clone https://github.com/fareedfk47/Bank-app.git
+   cd Bank-app
    ```
 
 2. **Compile the source files:**
